@@ -213,6 +213,16 @@ class Queue(models.Model):
         super(Queue, self).save(force_insert, force_update)
 
 
+class ConfigurationItem(models.Model):
+    name=models.CharField(
+        _('Name'),
+        max_length=50,
+        blank=True,
+        null=True,
+        help_text=_('Configuration Item name'),
+        )
+
+
 class Ticket(models.Model):
     """
     To allow a ticket to be entered as quickly as possible, only the
